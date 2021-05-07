@@ -1,0 +1,111 @@
+@use "sass:map";
+
+//Containers
+
+$container-sizes: ("xs": 50, "s": 60, "m": 70, "l": 80, "xl": 90);
+
+@mixin container-base {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@each $size, $percent in $container-sizes {
+    @if $size == "m" {
+        .container-#{$size}, .container {
+            width: percentage($percent / 100);
+            @include container-base;
+        }
+    } @else {
+        .container-#{$size} {
+            width: percentage($percent / 100);
+            @include container-base;
+        }
+    }
+}
+
+
+//Padding and Margin
+
+$spacing-types: ("padding": "p", "margin": "m");
+$single-spacing-directions: ("top": "t", "right": "r", "bottom": "b", "left": "l");
+$combined-spacing-directions: ("left and right": "x", "top and bottom": "y");
+$spacing-sizes: (1: 0.25rem, 2: 0.5rem, 3: 0.75rem, 4: 1rem, 5: 1.25rem, 6: 1.5rem);
+
+@each $type, $type-symbol in $spacing-types {
+    @each $direction, $direction-symbol in $single-spacing-directions {
+        @each $size, $size-value in $spacing-sizes {
+            .#{$type-symbol}#{$direction-symbol}-#{$size} {
+                #{$type}-#{$direction}: #{$size-value};
+            }
+        }
+    }
+    @each $direction, $direction-symbol in $combined-spacing-directions {
+        @each $size, $size-value in $spacing-sizes {
+            @if $direction-symbol == "x" {
+                .#{$type-symbol}#{$direction-symbol}-#{$size} {
+                    #{$type}-left: #{$size-value};
+                    #{$type}-right: #{$size-value};
+                }
+            }
+            @if $direction-symbol == "y" {
+                .#{$type-symbol}#{$direction-symbol}-#{$size} {
+                    #{$type}-top: #{$size-value};
+                    #{$type}-bottom: #{$size-value};
+                }
+            }
+        }
+    }
+}
+
+
+//Positions and Offsets
+$positions: (static, relative, absolute, fixed);
+$offset-x-directions: (left, middle, right);
+$offset-y-directions: (top, bottom);
+
+@each $position in $positions {
+    .is-#{$position} {
+        position: $position;
+    }
+}
+
+@each $y-direction in $offset-y-directions {
+    @each $x-direction in $offset-x-directions {
+        @if $x-direction == middle {
+            .is-#{$y-direction}-#{$x-direction} {
+                #{$y-direction}: 0;
+                left: 50%;
+                right: 50%;
+            }
+        } 
+        @else {
+            .is-#{$y-direction}-#{$x-direction} {
+                #{$y-direction}: 0;
+                #{$x-direction}: 0;
+            }
+        }
+    }
+}
+
+@mixin center-positions($direction) {
+    @if $direction == middle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $direction == left {
+        top: 50%;
+        left: 0%;
+        transform: translate(-0%, -50%);
+    } @else if $direction == right {
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+    }
+}
+
+@each $direction in $offset-x-directions {
+    .is-center-#{$direction} {
+        @include center-positions($direction);
+    }
+}
