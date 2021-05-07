@@ -1,0 +1,77 @@
+$grid-directions: "columns", "rows";
+$gutter-size: 10px;
+
+@each $direction in $grid-directions {
+    .#{$direction} {
+        position: relative;
+        width: 100%;
+        display: flex;
+
+        * {
+            flex: 1;
+        }
+
+        @if $direction == "rows" {
+            flex-direction: column;
+
+            //Gutters for rows
+            &.has-gutters {
+                & > * {
+                    margin-top: $gutter-size;
+                }
+        
+                & > *:first-child {
+                    margin: 0;
+                }
+            }
+        } @else {
+            //Gutters for columns
+            &.has-gutters {
+                & > * {
+                    margin-left: $gutter-size;
+                }
+        
+                & > *:first-child {
+                    margin: 0;
+                }
+            }
+
+            //Sizes for columns
+            @for $i from 1 through 100 {
+                .is-#{$i} {
+                    flex: 0 0 percentage($i / 100);
+                }
+            }
+        }
+    }
+}
+
+//Column Positioning
+.has-columns-centered {
+    justify-content: center;
+}
+
+.has-columns-left {
+    justify-content: flex-start;
+}
+
+.has-columns-right {
+    justify-content: flex-end;
+}
+
+.has-columns-spaced-between {
+    justify-content: space-between;
+}
+
+.has-columns-spaced-around {
+    justify-content: space-around;
+}
+
+.has-columns-spaced-evenly {
+    justify-content: space-evenly;
+}
+
+
+.columns > *, .rows > * {
+    border: 1px solid black;
+}
