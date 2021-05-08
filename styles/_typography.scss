@@ -1,0 +1,121 @@
+//Font Family
+
+* {
+    font-family: Lato, sans-serif;
+}
+
+
+//Font Faces
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-Thin.ttf") format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family:"Lato";
+    src: url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+//Title Sizes
+$title-sizes: (1: 20px, 2: 30px, 3: 40px, 4: 50px, 5: 60px, 6: 70px);
+
+@each $n, $size in $title-sizes {
+    .is-title-#{$n} {
+        font-size: $size;
+        font-weight: bold;
+    }
+}
+
+
+// Text Alignment
+$text-directions: (left, center, right);
+
+@each $direction in $text-directions {
+    .has-text-#{$direction} {
+        text-align: $direction;
+    }
+}
+
+
+//Font Weights
+$font-weights: (thinner: 100, thin: 300, regular: 400, bold: 700);
+
+@each $name, $weight in $font-weights {
+    .has-text-#{$name} {
+        font-weight: $weight;
+    }
+}
+
+
+//Font Sizes
+$font-sizes: (1: 12px, 2: 15px, 3: 18px, 4: 25px, 5: 30px, 6: 35px);
+
+@each $n, $size in $font-sizes {
+    .is-fs-#{$n} {
+        font-size: $size;
+    }
+}
+
+
+//Colors
+$colors: (lighter: #c9c9c9, light: #adadad, neutral: #838383, dark: #474747, darker: #252525, danger: #f14d4d, success: #5cf370, warning: #f6f861, primary: #4c7de6);
+
+@each $name, $color in $colors {
+    .has-text-#{$name} {
+        color: $color;
+    }
+}
+
+
+//Italics and Underlines
+.has-text-italic {
+    font-style: italic;
+}
+
+.has-text-underlined {
+    text-decoration: underline;
+}

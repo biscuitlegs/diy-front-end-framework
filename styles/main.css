@@ -770,4 +770,178 @@
   transform: translate(-100%, -50%);
 }
 
+* {
+  font-family: Lato, sans-serif;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+.is-title-1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.is-title-2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.is-title-3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.is-title-4 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.is-title-5 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.is-title-6 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.has-text-left {
+  text-align: left;
+}
+
+.has-text-center {
+  text-align: center;
+}
+
+.has-text-right {
+  text-align: right;
+}
+
+.has-text-thinner {
+  font-weight: 100;
+}
+
+.has-text-thin {
+  font-weight: 300;
+}
+
+.has-text-regular {
+  font-weight: 400;
+}
+
+.has-text-bold {
+  font-weight: 700;
+}
+
+.is-fs-1 {
+  font-size: 12px;
+}
+
+.is-fs-2 {
+  font-size: 15px;
+}
+
+.is-fs-3 {
+  font-size: 18px;
+}
+
+.is-fs-4 {
+  font-size: 25px;
+}
+
+.is-fs-5 {
+  font-size: 30px;
+}
+
+.is-fs-6 {
+  font-size: 35px;
+}
+
+.has-text-lighter {
+  color: #c9c9c9;
+}
+
+.has-text-light {
+  color: #adadad;
+}
+
+.has-text-neutral {
+  color: #838383;
+}
+
+.has-text-dark {
+  color: #474747;
+}
+
+.has-text-darker {
+  color: #252525;
+}
+
+.has-text-danger {
+  color: #f14d4d;
+}
+
+.has-text-success {
+  color: #5cf370;
+}
+
+.has-text-warning {
+  color: #f6f861;
+}
+
+.has-text-primary {
+  color: #4c7de6;
+}
+
+.has-text-italic {
+  font-style: italic;
+}
+
+.has-text-underlined {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=main.css.map */
