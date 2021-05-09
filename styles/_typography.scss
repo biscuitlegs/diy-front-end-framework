@@ -1,3 +1,7 @@
+// Use Colors
+@use 'colors';
+
+
 //Font Family
 
 * {
@@ -102,9 +106,7 @@ $font-sizes: (1: 12px, 2: 15px, 3: 18px, 4: 25px, 5: 30px, 6: 35px);
 
 
 //Colors
-$colors: (lighter: #c9c9c9, light: #adadad, neutral: #838383, dark: #474747, darker: #252525, danger: #f14d4d, success: #5cf370, warning: #f6f861, primary: #4c7de6);
-
-@each $name, $color in $colors {
+@each $name, $color in colors.$colors {
     .has-text-#{$name} {
         color: $color;
     }
