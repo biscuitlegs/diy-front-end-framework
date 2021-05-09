@@ -1,5 +1,6 @@
 //Comment or uncomment modules below to use or not use them.
 
-@import 'grid';
-@import 'positioning';
-@import 'typography';
+@use 'grid';
+@use 'positioning';
+@use 'typography';
+@use 'utilities';

@@ -1,0 +1,45 @@
+//Use Colors
+@use 'colors';
+
+
+//Borders
+$border-directions:(top, right, bottom, left);
+
+@each $name, $hex in colors.$colors {
+    .has-border-#{$name} {
+        border: 1px solid $hex;
+    }
+
+    @each $direction in $border-directions {
+        .has-border-#{$direction}-#{$name} {
+            border-#{$direction}: 1px solid #{$hex};
+        }
+    }
+}
+
+
+//Shapes
+.has-rounded-corners {
+    border-radius: 4px;
+}
+
+.is-circle {
+    border-radius: 50%;
+}
+
+
+//Visibility
+.is-hidden {
+    visibility: hidden;
+}
+
+.is-visible {
+    visibility: visible;
+}
+
+//Background Colors
+@each $name, $color in colors.$colors {
+    .has-background-#{$name} {
+        background-color: $color;
+    }
+}
