@@ -1,4 +1,4 @@
-# DIY Grid Based Framework
+# DIY Framework
 
 ## About
 Framework made as a means to learn Sass. Split into modules so the framework can be as light as necessary.
@@ -14,6 +14,9 @@ Framework made as a means to learn Sass. Split into modules so the framework can
 
 ## Module selection
 If you dont need some of the modules, you can comment out the line that includes it in `main.scss`. (If you do this you will need to recompile using sass.)
+
+### Reset module
+[Eric Meyer's css reset](https://meyerweb.com/eric/tools/css/reset/) is included as a module. If for some reason you don't need it, you can disable it like any other module. **Thanks Eric!**
 
 <br>
 
