@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
 .columns {
   position: relative;
   width: 100%;
@@ -774,50 +775,6 @@
   font-family: Lato, sans-serif;
 }
 
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Thin.ttf") format("truetype");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
 .is-title-1 {
   font-size: 20px;
   font-weight: bold;
