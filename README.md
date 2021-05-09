@@ -5,6 +5,18 @@ Framework made as a means to learn Sass. Split into modules so the framework can
 
 <br>
 
+## How to use
+1. Place `main.css` in your project.
+2. Link to it in the head of your document.
+3. You're done!
+
+<br>
+
+## Module selection
+If you dont need some of the modules, you can comment out the line that includes it in `main.scss`. (If you do this you will need to recompile using sass.)
+
+<br>
+
 ## Grid
 The grid module allows you to create a container with rows or columns to create layouts.
 
@@ -192,3 +204,62 @@ You can use the **lighter**, **light**, **neutral**, **dark** or **darker** suff
 
 ### Italics and Underlines
 You can make text italic with `.has-text-italic`, and/or underline it with `.has-text-underlined`.
+
+<br>
+
+## Utilities
+Various utility classes exist that allow you to modify elements to your liking.
+
+### Borders
+You can add a border to an element with a class of the form `.has-border-`*`color`*, where *color* is one of the following:
+
+| Class | Color |
+| ------------- | ------------- |
+| .has-border-lighter | #c9c9c9 |
+| .has-border-light | #adadad |
+| .has-border-neutral | #838383 |
+| .has-border-dark | #474747 |
+| .has-border-darker | #252525 |
+| .has-border-danger | #f14d4d |
+| .has-border-warning | #f6f861 |
+| .has-border-success | #5cf370 |
+| .has-border-primary | #4c7de6 |
+
+<br>
+
+You can also specify a certain side to place a border on an element using a class of the form `.has-border-`*`side`*`-`*`color`*, where *side* is either **top**, **bottom**, **left** or **right**, and color is one of the following:
+
+| Color | Hex |
+| ------------- | ------------- |
+| lighter | #c9c9c9 |
+| light | #adadad |
+| neutral | #838383 |
+| dark | #474747 |
+| darker | #252525 |
+| danger | #f14d4d |
+| warning | #f6f861 |
+| success | #5cf370 |
+| primary | #4c7de6 |
+
+<br>
+
+### Shapes
+You can round the corners of an element with the class `.has-rounded-corners`. You can make an element into a circle with the class `.is-circle`.
+
+### Visibility
+You can make an element invisible with `.is-hidden`. You can make an element visible with the class `.is-visible`.
+
+### Background Colors
+You can change the background color of an element with a class of the form `.has-background-`*`color`*, where *color* is from the following:
+
+| Color | Hex |
+| ------------- | ------------- |
+| lighter | #c9c9c9 |
+| light | #adadad |
+| neutral | #838383 |
+| dark | #474747 |
+| darker | #252525 |
+| danger | #f14d4d |
+| warning | #f6f861 |
+| success | #5cf370 |
+| primary | #4c7de6 |
